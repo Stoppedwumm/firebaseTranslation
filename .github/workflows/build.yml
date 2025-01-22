@@ -28,6 +28,8 @@ jobs:
             - name: Install firebase packages
               run: |
                 cd firebase-js-sdk
+                npm cache clean
+                sudo npm install -g npm
                 npm i --force
             - name: Build Firebase SDK
               run: |
