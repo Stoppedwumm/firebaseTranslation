@@ -15,14 +15,16 @@ jobs:
             # Also clone recursively to get submodules
             - uses: actions/checkout@v2
               with:
-                  fetch-depth: 0
+                  fetch-depth: 10
             - uses: actions/setup-node@v1
               with:
                   node-version: 14.x
             - run: npm i
             - run: |
                 cd js-to-lua
+                echo Installing js-to-lua...
                 npm i
+                echo Building...
                 npm run build:prod
             - name: Install firebase packages
               run: |
