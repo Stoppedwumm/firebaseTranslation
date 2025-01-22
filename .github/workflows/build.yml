@@ -33,7 +33,9 @@ jobs:
               run: |
                 cd firebase-js-sdk
                 yarn set version 1.22.11
+                cd ..
                 node parse.js
+                cd firebase-js-sdk
                 yarn build
             - name: Build Firebase SDK
               run: |
