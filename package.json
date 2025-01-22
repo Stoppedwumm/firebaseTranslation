@@ -1,0 +1,24 @@
+{
+  "name": "firebasetranslation",
+  "version": "1.0.0",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stoppedwumm/firebaseTranslation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Stoppedwumm/firebaseTranslation/issues"
+  },
+  "homepage": "https://github.com/Stoppedwumm/firebaseTranslation#readme",
+  "description": "",
+  "dependencies": {
+    "firebase": "^11.2.0"
+  }
+}

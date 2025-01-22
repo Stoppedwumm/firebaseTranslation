@@ -25,21 +25,9 @@ jobs:
                 npm i
                 echo Building...
                 npm run build:prod
-            - uses: actions/setup-java@v4
-              with:
-                  distribution: temurin
-                  java-version: 17
-            - name: Install firebase packages
-              run: |
-                cd firebase-js-sdk
-                yarn set version 1.22.11
-                cd ..
-                node parse.js
-                cd firebase-js-sdk
-                yarn build
             - name: Build Firebase SDK
               run: |
                 cd js-to-lua
                 ./dist/apps/convert-js-to-lua/index.js \
-                    --input firebase-js-sdk/**/*.js firebase-js-sdk/**/*.ts \
+                    --input node_modules/**/*.js node_modules/**/*.ts \
                     --output lua-source-files

@@ -2,7 +2,3 @@
 	path = js-to-lua
 	url = https://github.com/Roblox/js-to-lua
 	branch = main
-[submodule "firebase-js-sdk"]
-	path = firebase-js-sdk
-	url = https://github.com/firebase/firebase-js-sdk
-	branch = main
