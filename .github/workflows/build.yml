@@ -25,12 +25,15 @@ jobs:
                 npm i
                 echo Building...
                 npm run build:prod
+            - uses: actions/setup-java@v4
+              with:
+                  distribution: temurin
+                  java-version: 17
             - name: Install firebase packages
               run: |
                 cd firebase-js-sdk
-                npm cache clean --force
-                sudo npm install -g npm
-                npm i --force
+                yarn set version 1.22.11
+                yarn build
             - name: Build Firebase SDK
               run: |
                 cd js-to-lua
