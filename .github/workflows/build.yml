@@ -20,7 +20,10 @@ jobs:
               with:
                   node-version: 14.x
             - run: npm i
-            - run: npm run build:prod
+            - run: |
+                cd js-to-lua
+                npm i
+                npm run build:prod
             - name: Install firebase packages
               run: |
                 cd firebase-js-sdk
